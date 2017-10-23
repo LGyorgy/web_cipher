@@ -3,5 +3,8 @@ require "sinatra/reloader" if development?
 require "./caesar_cipher"
 
 get "/" do
- caesar_cipher("Hello World!", 3)  
+  text = params[:text]
+  shift = params[:shift].to_i
+  msg = caesar_cipher(text, shift)
+  erb :index, :locals => { msg: msg }
 end

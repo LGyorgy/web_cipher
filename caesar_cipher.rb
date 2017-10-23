@@ -1,5 +1,6 @@
 def caesar_cipher(text, shift)
   code = []
+  return "" unless text
   text.each_char do |letter|
     if ("a".."z").include?(letter) || ("A".."Z").include?(letter)
       shift.times do 

@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Web Cipher</title>
+</head>
+<body>
+  <h1>Web Cipher</h1>
+  <form>
+    Text to cipher:<br/>
+    <input type="text" name="text"/><br/>
+    Shift factor:<br/>
+    <input type="number" name="shift" min="0"/><br/>
+    <input type="submit"/>
+  </form>
+  <p>
+    <% if msg != "" %>
+      <h4>Ciphered text:</h4>
+      <div><%= msg %></div>
+    <% end %>
+  </p>
+</body>
+</html>
